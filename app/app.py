@@ -5,6 +5,9 @@ import os
 
 
 
+
+
+
 # Set up OpenAI API key
 openai.api_type = "azure"
 openai.api_base = "https://aks-production.openai.azure.com/"
