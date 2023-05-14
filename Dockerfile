@@ -6,4 +6,5 @@ COPY req req
 RUN pip install -r req
 
 
+
 CMD ["streamlit", "run" , "bot.py","--server.port","80"]
