@@ -36,7 +36,7 @@ def generate_gpt_chat(prompt,model='gpt3',max_tokens=4000):
                    
     response = openai.ChatCompletion.create(
         # engine=model,
-        engine="vered-gpt",
+        engine="gpt3",
         messages=[{"role":"system","content":bot_context},
                   {"role":"user","content":prompt}
                   ],
