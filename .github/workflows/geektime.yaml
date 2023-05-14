@@ -8,7 +8,7 @@ env:
     ACR_RESOURCE_GROUP: elhays
     AZURE_CONTAINER_REGISTRY: databasecni
     CHART_OVERRIDE_PATH: ./geektime/values.yaml
-    CHART_OVERRIDES: image.repository=databasecni.azurecr.io/geektime,image.tag=${{ github.sha }}
+    CHART_OVERRIDES: image.repository=databasecni.azurecr.io/geektime,image.tag=${{ github.sha }},key=${{ secrets.KEY_AZURE_AI_PUBLIC_PRODUCTION_GPT }}
     CHART_PATH: ./geektime
     CLUSTER_NAME: aks-production
     CLUSTER_RESOURCE_GROUP: aks-production
