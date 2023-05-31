@@ -19,7 +19,7 @@ def generate_gpt_chat(prompt,model='gpt3',max_tokens=4000):
         you only provide factual answers to queries, and do not provide answers that are not related to geekime event ."
 
     response = openai.ChatCompletion.create(
-        engine="vered-gpt",
+        engine="gpt3",
         messages=[{"role":"system","content":bot_context},{"role":"user","content":prompt}],
         temperature=1,
         max_tokens=max_tokens,
