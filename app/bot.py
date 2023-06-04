@@ -60,6 +60,10 @@ st.markdown("This is a chatbot that can answer questions about the event agenda"
 results["questions"] += 1
 results["answers"] += 2
 
+
+st.session_state['generated'] = []
+st.session_state['past'] = []
+
 if 'generated' not in st.session_state:
     st.session_state['generated'] = []
 if 'past' not in st.session_state:
@@ -70,9 +74,7 @@ if 'past' not in st.session_state:
 
 user_input=st.text_input("You:",key='input')
 if user_input:
-    results["questions"] += 1
     output=generate_gpt_chat(prompt=user_input)
-    results["answers"] += 2
     st.session_state['past'].append(user_input)
     st.session_state['generated'].append(output)
 if st.session_state['generated']:
