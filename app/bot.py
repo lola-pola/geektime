@@ -43,7 +43,7 @@ data = {"questions": 0, "answers": 0}
 
 
 st.set_page_config(page_title="Geektime Event Chatbot", page_icon=":robot_face:")
-st.title("Geektime Event Chatbot")
+st.title("Geektime Event Chatbot Test 1")
 # with st.sidebar.title("Geektime Event Chatbot"):
 #     if st.checkbox("Show Agenda"):
 #         st.table(json_loader(loc='agenda.json'))
