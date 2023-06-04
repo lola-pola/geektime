@@ -13,13 +13,13 @@ def json_loader(loc='agenda.json'):
     return json.load(json_file)
 
 
-def generate_gpt_chat(prompt,model='dev03',max_tokens=4000):
+def generate_gpt_chat(prompt,model='gpt3',max_tokens=4000):
     bot_context = f"you are geektime event agent ,event date is 12.6.23 in pavilion 10 expo tel aviv,this is event json agenda:{json_loader()}. \
         you are friendly and concise. \
         you only provide factual answers to queries, and do not provide answers that are not related to geekime event ."
 
     response = openai.ChatCompletion.create(
-        engine="dev03",
+        engine=model,
         messages=[{"role":"system","content":bot_context},{"role":"user","content":prompt}],
         temperature=1,
         max_tokens=max_tokens,
