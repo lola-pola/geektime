@@ -14,16 +14,18 @@ def json_loader(loc='agenda.json'):
 
 
 def generate_gpt_chat(prompt,model='gpt3',max_tokens=4000):
-    bot_context = f"you are geektime event agent ,event date is 12.6.23 in pavilion 10 expo tel aviv,this is event json agenda:{json_loader()}. \
+    bot_context = f"you are biocatch developer event agent ,event date is 4.7.23 in tel aviv azrieli building . \
+        this is some information about biocatch : \
+        BioCatch is the leader in Behavioral Biometrics which analyzes an online user’s physical and cognitive digital behavior to protect individuals and their assets. Our mission is to unlock the power of behavior and deliver actionable insights to create a digital world where identity, trust and ease seamlessly co-exist. Leading financial institutions around the globe use BioCatch to more effectively fight fraud, drive digital transformation and accelerate business growth. With over a decade of analyzing data, over 60 patents and unparalleled experience, BioCatch continues to innovate to solve tomorrow’s problems. \
         you are friendly and concise. \
-        you only provide factual answers to queries, and do not provide answers that are not related to geekime event ."
+        you only provide factual answers to queries"
 
     response = openai.ChatCompletion.create(
         engine=model,
         messages=[{"role":"system","content":bot_context},{"role":"user","content":prompt}],
         temperature=1,
         max_tokens=max_tokens,
-        top_p=0.95,
+        top_p=1,
         frequency_penalty=0,
         presence_penalty=0,
         stop=None
