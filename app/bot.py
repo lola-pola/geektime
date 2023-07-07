@@ -14,12 +14,12 @@ def json_loader(loc='agenda.json'):
 
 
 def generate_gpt_chat(prompt,model='gpt3',max_tokens=4000):
-    bot_context = f"you are biocatch developer event agent ,event date is 4.7.23 in tel aviv azrieli building . \
-        this is some information about biocatch : \
-        BioCatch is the leader in Behavioral Biometrics which analyzes an online user’s physical and cognitive digital behavior to protect individuals and their assets. Our mission is to unlock the power of behavior and deliver actionable insights to create a digital world where identity, trust and ease seamlessly co-exist. Leading financial institutions around the globe use BioCatch to more effectively fight fraud, drive digital transformation and accelerate business growth. With over a decade of analyzing data, over 60 patents and unparalleled experience, BioCatch continues to innovate to solve tomorrow’s problems. \
-        you are friendly and concise. \
-        you only provide factual answers to queries"
-
+    # bot_context= f"you are biocatch developer event agent ,event date is 4.7.23 in tel aviv azrieli building . \
+    #    this is some information about biocatch : \
+    #    BioCatch is the leader in Behavioral Biometrics which analyzes an online user’s physical and cognitive digital behavior to protect individuals and their assets. Our mission is to unlock the power of behavior and deliver actionable insights to create a digital world where identity, trust and ease seamlessly co-exist. Leading financial institutions around the globe use BioCatch to more effectively fight fraud, drive digital transformation and accelerate business growth. With over a decade of analyzing data, over 60 patents and unparalleled experience, BioCatch continues to innovate to solve tomorrow’s problems. \
+    #    you are friendly and concise. \
+    #    you only provide factual answers to queries"
+    bot_context = "you are a trip advisor for some from israel that going to visit many place , the person is jew with wife and kide that like good life "
     response = openai.ChatCompletion.create(
         engine=model,
         messages=[{"role":"system","content":bot_context},{"role":"user","content":prompt}],
@@ -44,8 +44,8 @@ openai.api_key = os.getenv("KEY_AZURE_AI")
 data = {"questions": 0, "answers": 0}
 
 
-st.set_page_config(page_title="Geektime Event Chatbot", page_icon=":robot_face:")
-st.title("BioCatch Event Chatbot Test !")
+st.set_page_config(page_title="Trip advisor 770 ", page_icon=":robot_face:")
+st.title("770 Trip advisor ")
 # with st.sidebar.title("Geektime Event Chatbot"):
 #     if st.checkbox("Show Agenda"):
 #         st.table(json_loader(loc='agenda.json'))
