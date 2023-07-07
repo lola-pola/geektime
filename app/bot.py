@@ -58,13 +58,13 @@ st.title("770 Trip advisor ")
 
 
 
-with st.expander("See explanation"):
-    st.write('http://geektime.westeurope.cloudapp.azure.com/')
-    st.write('http://wix-elhay.westeurope.cloudapp.azure.com/generate_page_content')
-    st.write('http://chat-with-pdf.westeurope.cloudapp.azure.com/')
-    st.write('http://chat-sql.westeurope.cloudapp.azure.com/')
-    st.write('http://call-elhay.westeurope.cloudapp.azure.com/')
-    st.write('https://github.com/orgs/lola-pola/repositories')
+#with st.expander("See explanation"):
+#    st.write('http://geektime.westeurope.cloudapp.azure.com/')
+#    st.write('http://wix-elhay.westeurope.cloudapp.azure.com/generate_page_content')
+#    st.write('http://chat-with-pdf.westeurope.cloudapp.azure.com/')
+#    st.write('http://chat-sql.westeurope.cloudapp.azure.com/')
+#    st.write('http://call-elhay.westeurope.cloudapp.azure.com/')
+#    st.write('https://github.com/orgs/lola-pola/repositories')
 
 
 results["questions"] += 1
